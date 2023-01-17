@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+#UI {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+.filtros {
+  margin: 2rem;
+}
+
+.filtros select {
+  margin-right: 1rem;
+}
+
+.card {
+  margin: 1rem;
+  border: 2px solid black;
+  padding: 0.8rem;
+  border-radius: 25px;
+  max-width: 14rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.4rem;
+}
+
+.card-price {
+  font-size: 1.3rem;
+}
+
+.card-img {
+  max-width: 18rem;
+}
