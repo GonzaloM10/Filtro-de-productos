@@ -72,9 +72,11 @@ mostrarProductos(productos);
 botonEnviar.addEventListener("click", () => {
   let productosHtml = document.querySelectorAll(".card");
 
-  productosHtml.forEach((producto) => {
-    producto.remove();
-  });
+  if (options.value !== "Filtrar") {
+    productosHtml.forEach((producto) => {
+      producto.remove();
+    });
+  }
 
   switch (options.value) {
     case "A-Z":
