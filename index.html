@@ -6,9 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Filtro de Productos</title>
     <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <div class="filtros">
+      <h3>Filtros:</h3>
+
+      <div class="div-busqueda">
+        <input type="text" id="busqueda" placeholder="Buscar..." />
+
+        <button id="boton-busqueda">Buscar</button>
+      </div>
+
       <select>
         <option>Filtrar</option>
         <option>A-Z</option>
@@ -16,6 +32,23 @@
         <option>Precio: Mayor a menor</option>
         <option>Precio: Menor a mayor</option>
       </select>
+
+      <label for="alimentos-no-perecederos">
+        Alimentos no perecederos
+        <input type="checkbox" id="alimentos-no-perecederos" />
+      </label>
+      <label for="comida-enlatada">
+        Comida enlatada
+        <input type="checkbox" id="comida-enlatada" />
+      </label>
+      <label for="snacks">
+        Snacks
+        <input type="checkbox" id="snacks" />
+      </label>
+      <label for="lacteos">
+        Lacteos
+        <input type="checkbox" id="lacteos" />
+      </label>
 
       <input type="button" value="Aplicar" id="boton-enviar" />
     </div>

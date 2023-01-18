@@ -12,10 +12,41 @@ body {
 
 .filtros {
   margin: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  max-width: 6rem;
+  margin: 0.3rem 0;
+}
+
+.div-busqueda {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+#busqueda {
+  max-width: 12rem;
+  font-size: 1.12rem;
+  margin-right: 1rem;
+}
+
+.msj-alerta {
+  margin: 0 1rem;
+  max-height: 2.3rem;
+  font-size: 1.02rem;
+  background-color: rgb(155, 18, 18);
+  border: 1px solid black;
+  padding: 6px;
+  color: white;
 }
 
 .filtros select {
   margin-right: 1rem;
+  max-width: 10rem;
+  margin-bottom: 1rem;
 }
 
 .card {
@@ -27,6 +58,23 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  transition: all 0.5s ease;
+}
+
+.card:hover {
+  box-shadow: 2px 4px 6px black;
+  transform: translateY(-5px);
+}
+
+.card:hover > .card-img {
+  transform: scale(1.12);
+}
+
+.card-img {
+  max-width: 18rem;
+  object-fit: cover;
+  min-height: 230px;
+  transition: all 0.5s ease;
 }
 
 .card-body {
@@ -39,8 +87,4 @@ body {
 
 .card-price {
   font-size: 1.3rem;
-}
-
-.card-img {
-  max-width: 18rem;
 }
