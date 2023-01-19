@@ -101,8 +101,6 @@ let productos = [
   { nombre: "Zucaritas", precio: 95, img: "img/zucaritas.jpg", tipo: "snack" },
 ];
 
-let productosOriginales = productos;
-
 const checkboxAlimentos = document.getElementById("alimentos-no-perecederos");
 const checkboxComidaEnlatada = document.getElementById("comida-enlatada");
 const checkboxSnack = document.getElementById("snacks");
@@ -170,44 +168,88 @@ botonEnviar.addEventListener("click", () => {
   switch (options.value) {
     case "A-Z":
       productosFiltrados.sort((a, b) => {
-        return a.nombre > b.nombre;
+        const nombreA = a.nombre.toLocaleLowerCase();
+        const nombreB = b.nombre.toLocaleLowerCase();
+
+        if (nombreA < nombreB) {
+          return -1;
+        }
+
+        if (nombreA > nombreB) {
+          return 1;
+        }
+
+        return 0;
       });
 
       productos.sort((a, b) => {
-        return a.nombre > b.nombre;
+        const nombreA = a.nombre.toLocaleLowerCase();
+        const nombreB = b.nombre.toLocaleLowerCase();
+
+        if (nombreA < nombreB) {
+          return -1;
+        }
+
+        if (nombreA > nombreB) {
+          return 1;
+        }
+
+        return 0;
       });
 
       break;
 
     case "Z-A":
       productosFiltrados.sort((a, b) => {
-        return b.nombre > a.nombre;
+        const nombreA = a.nombre.toLocaleLowerCase();
+        const nombreB = b.nombre.toLocaleLowerCase();
+
+        if (nombreB < nombreA) {
+          return -1;
+        }
+
+        if (nombreB > nombreA) {
+          return 1;
+        }
+
+        return 0;
       });
 
       productos.sort((a, b) => {
-        return b.nombre > a.nombre;
+        const nombreA = a.nombre.toLocaleLowerCase();
+        const nombreB = b.nombre.toLocaleLowerCase();
+
+        if (nombreB < nombreA) {
+          return -1;
+        }
+
+        if (nombreB > nombreA) {
+          return 1;
+        }
+
+        return 0;
       });
 
       break;
 
     case "Precio: Mayor a menor":
       productosFiltrados.sort((a, b) => {
-        return a.precio < b.precio;
+        return b.precio - a.precio;
       });
 
       productos.sort((a, b) => {
-        return a.precio < b.precio;
+        return b.precio - a.precio;
       });
 
       break;
 
     case "Precio: Menor a mayor":
       productosFiltrados.sort((a, b) => {
-        return a.precio > b.precio;
+        return a.precio - b.precio;
       });
 
       productos.sort((a, b) => {
-        return a.precio > b.precio;
+        return a.precio - b.precio;
       });
 
       break;
